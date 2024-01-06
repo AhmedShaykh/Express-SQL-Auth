@@ -23,7 +23,7 @@ class App {
     };
 };
 
-const port: number = 8080;
+const port = process.env.PORT;
 
 const app = new App().app;
 
