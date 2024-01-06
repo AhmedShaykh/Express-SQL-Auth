@@ -7,7 +7,7 @@ interface IAuthenticationService {
     register(
         email: string,
         password: string,
-        nama: string,
+        name: string,
         username: string
     ): Promise<void>;
 };

@@ -2,8 +2,8 @@
     "swagger": "2.0",
     "info": {
         "version": "1.0.0",
-        "title": "Express TypeScript PostgreSQL Authentication With Swagger UI",
-        "description": "Express TypeScript PostgreSQL Authentication With Swagger UI",
+        "title": "Express TypeScript PostgreSQL Full Stack Authentication API",
+        "description": "Express TypeScript PostgreSQL Full Stack Authentication API With Swagger UI",
         "license": {}
     },
     "paths": {

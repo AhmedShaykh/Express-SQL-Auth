@@ -1,7 +1,9 @@
-import express, { Application, Request, Response } from "express";
 import AuthenticationRouter from "./router/AuthenticationRouter";
-import Database from "./config/database";
+import * as swaggerDocument from "./swagger.json";
 import NoteRouter from "./router/NoteRouter";
+import Database from "./config/database";
+import express, { Application } from "express";
+import swaggerUi from "swagger-ui-express";
 
 class App {
 
@@ -12,6 +14,7 @@ class App {
         this.databaseSync();
         this.plugins();
         this.routes();
+        this.swaggerUi();
     };
 
     protected databaseSync(): void {
@@ -27,6 +30,10 @@ class App {
     protected plugins(): void {
         this.app.use(express.json());
         this.app.use(express.urlencoded({ extended: true }));
+    };
+
+    protected swaggerUi(): void {
+        this.app.use("/api/", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
     };
 };
 

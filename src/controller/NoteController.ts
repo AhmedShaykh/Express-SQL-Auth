@@ -121,7 +121,7 @@ class NoteController {
 
         try {
 
-            const note_Data = await new NoteRepo().getAll;
+            const note_Data = await new NoteRepo().getAll();
 
             res.status(200).json({
                 status: "Ok!",
